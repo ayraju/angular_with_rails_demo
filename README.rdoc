@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Angular + Rails DemoApp
+Hi Guys, its demo application where would like to show you the features with Angular(Frontend tech) + Ruby On Rails(Backend Tech).
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Here, you find the below features implementation
+SPA feature like About,Contact,Terms.. static pages
+Get data from backend and display in frontend - Rails(Backend) API call for fetch data(Projects)
+Angular Search in projects data
+Angular Pagination
