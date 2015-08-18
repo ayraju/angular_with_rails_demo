@@ -1,0 +1,7 @@
+    class Api::V1::ProjectsController < ApplicationController
+      def index
+        headers['Access-Control-Allow-Origin'] = '*'
+        @projects = Project.all
+         render :json => {:records => @projects}
+      end
+    end

@@ -1,0 +1,9 @@
+<h3>New project </h3>
+
+<div ng-controller="createProjectController">
+  <form novalidate class="project-form">
+    Title: <input type="text" ng-model="project.title" /><br />
+    Description: <input type="text" ng-model="project.description" /><br />
+    <input type="submit" ng-click="update(project)" value="Save" />
+  </form>
+</div>

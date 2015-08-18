@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<%#= link_to 'Edit', edit_project_path(@project) %> 
+<%#= link_to 'Back', projects_path %>
+
+<br>
+
+<%= form_tag('/create_project_comments', :remote => true) do -%>
+  <input type="text" value="" name="comment_content">
+  <input type="hidden" value=<%= @project.id %> name="project_id">
+  <div><br><%= submit_tag 'Save' %></div>
+<% end -%>
+
+<br><h3>List of comments</h3><br>
+<div id="project_comment_list"> <%= render(:partial => 'projects/comments_list', :locals => { :c => @comments }) %></div>

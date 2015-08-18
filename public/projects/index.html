@@ -1,0 +1,27 @@
+
+
+    <h3>Projects!</h3>
+	<a href="#projects/new" class="btn btn-primary">Create Project</a><br>
+		<div class="col-sm-3 col-md-3 pull-right">
+			<form class="navbar-form" role="search">
+				<div class="input-group">
+					<input type="text" class="form-control" ng-model="nameFilter" placeholder="Search" >
+				</div>
+			</form>
+		</div>   
+	<br><table class="table table-striped">
+	  <tr><th>Title</th><th>Description</th></tr>
+	  <tr ng-repeat="x in filteredTodos | filter: nameFilter">
+		<td>{{ x.title }}</td>
+		<td>{{ x.description }}</td>
+	  </tr>
+	</table>
+
+
+    <pagination 
+      ng-model="currentPage"
+      total-items="projects.length"
+      max-size="maxSize"  
+      boundary-links="true">
+    </pagination>
+  

@@ -1,0 +1,2 @@
+$('form')[0].reset();
+$('#project_comment_list').replaceWith("<%= escape_javascript render(:partial => 'projects/comments_list', :locals => { :c => @comments }) %>");
